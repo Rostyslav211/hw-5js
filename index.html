@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Оберіть напій</h1>
+    <form>
+        <label for="drink-select">Напій:</label>
+        <select id="drink-select" onchange="updateMessage()">
+            <option value="">-- Оберіть --</option>
+            <option value="coffee">Кава</option>
+            <option value="tea">Чай</option>
+            <option value="juice">Сік</option>
+        </select>
+    </form>
+    <div id="message">Будь ласка, оберіть напій.</div>
+
+    <div class="task">
+        <h2>2. Введіть день тижня</h2>
+        <form onsubmit="event.preventDefault(); checkDay();">
+            <label for="day-input">День тижня:</label>
+            <input type="text" id="day-input" placeholder="Наприклад: понеділок">
+            <button type="submit">Перевірити</button>
+        </form>
+        <div id="day-message" class="message">Введіть день тижня, щоб отримати результат.</div>
+    </div>
+
+    <div class="task">
+        <h2>3. Введіть номер місяця</h2>
+        <form onsubmit="event.preventDefault(); checkSeason();">
+            <label for="month-input">Номер місяця:</label>
+            <input type="number" id="month-input" placeholder="Наприклад: 3">
+            <button type="submit">Перевірити</button>
+        </form>
+        <div id="season-message" class="message">Введіть номер місяця, щоб отримати результат.</div>
+    </div>
+
+    <div class="task">
+        <h2>4. Введіть номер місяця для визначення кількості днів</h2>
+        <form onsubmit="event.preventDefault(); checkDaysInMonth();">
+            <label for="days-month-input">Номер місяця:</label>
+            <input type="number" id="days-month-input" placeholder="Наприклад: 2">
+            <button type="submit">Перевірити</button>
+        </form>
+        <div id="days-message" class="message">Введіть номер місяця, щоб отримати кількість днів.</div>
+    </div>
+
+    <div class="task">
+        <h2>5. Введіть колір</h2>
+        <form onsubmit="event.preventDefault(); checkColorAction();">
+            <label for="color-input">Колір:</label>
+            <input type="text" id="color-input" placeholder="Наприклад: червоний">
+            <button type="submit">Перевірити</button>
+        </form>
+        <div id="color-message" class="message">Введіть колір, щоб отримати результат.</div>
+    </div>
+
+    <div class="task">
+        <h2>6. Арифметичні операції</h2>
+        <form onsubmit="event.preventDefault(); calculateOperation();">
+            <label for="num1">Число 1:</label>
+            <input type="number" id="num1" placeholder="Введіть перше число">
+            <label for="num2">Число 2:</label>
+            <input type="number" id="num2" placeholder="Введіть друге число">
+            <label for="operation-select">Операція:</label>
+            <select id="operation-select">
+                <option value="">-- Оберіть операцію --</option>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <button type="submit">Розрахувати</button>
+        </form>
+        <div id="result-message" class="message">Результат буде тут.</div>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
